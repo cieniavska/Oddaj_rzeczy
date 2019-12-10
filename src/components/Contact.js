@@ -10,13 +10,21 @@ class Contact extends Component {
                 <div className="contact__form">
                     <SectionTitle title="Skontaktuj się z nami"/>
                     <form className="flex">
-                        <label for="name">Wpisz swoje imię</label>
-                        <input name="name" type="text"></input>
-                        <label for="email">Wpisz swój email</label>
-                        <input name="email" type="email"></input>
-                        <label for="msg">Wpisz swoją wiadomość</label>
-                        <textarea></textarea>
-                        <input name="submit" type="submit"></input>
+                        <div className="nameEmail flex">
+                            <div className="nameEmail_first">
+                                <label>Wpisz swoje imię</label>
+                                <input name="name" type="text"></input>
+                            </div>
+                            <div className="nameEmail_second">
+                                <label>Wpisz swój email</label>
+                                <input name="email" type="email"></input>
+                            </div>
+                        </div>
+                        <div className="msg flex">
+                            <label>Wpisz swoją wiadomość</label>
+                            <textarea></textarea>
+                        </div>
+                        <input className="submit"name="submit" type="submit"></input>
                     </form>
                 </div>
             </div>

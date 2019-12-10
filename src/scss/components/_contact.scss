@@ -1,17 +1,50 @@
 .contact {
     width: 100vw;
     height: 100vh;
-    background-image: linear-gradient(rgba(233, 235, 214, 0.6),$bg),url(./../../assets/contact-form.jpg);
+    background-image: linear-gradient(rgba(231, 227, 189, 0.6),$bg),url(./../../assets/contact-form.jpg);
     background-size: cover;
     @include centralize;
     &__empty {
         width: 60%;
     }  
     &__form {
-        width: 40%;
+        width: 30%;
         form {
+            text-align: left;
+            font-size: 1.1rem;
             flex-direction: column;
+            .nameEmail {
+                flex-direction: row;
+                height: 50%;
+                width: 100%;
+            }
+            label {
+                font-size: .9rem;
+                font-weight: bolder;
+            }
+            input, textarea {
+                margin: 12px;
+                border: none;
+                outline: none;
+                background-color: transparent;
+                border-bottom: .7px solid $text;
+                margin: 0;
+                padding: 6px;
+            }
+            .msg {
+                margin-top: 15px;
+                height: 50%;
+                width: 100%;
+                flex-direction: column;
+            }
             @include centralize;
+            .submit {
+                font-size: 1.1rem;
+                border: none;
+                background-color: transparent;
+                border: .7px solid $text;
+                padding: 10px;
+            }
         }
     }
 }
