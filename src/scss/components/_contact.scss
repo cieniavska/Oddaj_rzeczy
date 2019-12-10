@@ -5,18 +5,22 @@
     background-size: cover;
     @include centralize;
     &__empty {
-        width: 60%;
+        width: 65%;
     }  
     &__form {
-        width: 30%;
+        margin-right: 100px;
+        width: 35%;
         form {
-            text-align: left;
             font-size: 1.1rem;
             flex-direction: column;
             .nameEmail {
-                flex-direction: row;
-                height: 50%;
-                width: 100%;
+                justify-content: space-evenly;
+                &__first {
+                    width: 50%;
+                }
+                &__second {
+                    width: 50%;
+                }
             }
             label {
                 font-size: .9rem;
@@ -29,7 +33,11 @@
                 background-color: transparent;
                 border-bottom: .7px solid $text;
                 margin: 0;
-                padding: 6px;
+                padding: 5px;
+            }
+            textarea {
+                padding: 40px;
+                margin-bottom: 20px;
             }
             .msg {
                 margin-top: 15px;
@@ -37,13 +45,13 @@
                 width: 100%;
                 flex-direction: column;
             }
-            @include centralize;
             .submit {
                 font-size: 1.1rem;
                 border: none;
                 background-color: transparent;
                 border: .7px solid $text;
                 padding: 10px;
+                margin-left: 200px;
             }
         }
     }
