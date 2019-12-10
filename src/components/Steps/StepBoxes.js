@@ -4,11 +4,11 @@ import StepBox from './StepBox';
 class StepBoxes extends Component {
     render() {
         return (
-            <div>
-                <StepBox title="Wybierz rzeczy"/>
-                <StepBox title="Spakuj je"/>
-                <StepBox title="Zdecyduj komu chcesz pomóc"/>
-                <StepBox title="Zamów kuriera"/>
+            <div className="steps__boxes flex">
+                <StepBox title="Wybierz rzeczy" description="ubrania, zabawki, sprzęt i inne"/>
+                <StepBox title="Spakuj je" description="skorzystaj z worków na śmieci"/>
+                <StepBox title="Zdecyduj komu chcesz pomóc" description="wybierz zaufane miejsce"/>
+                <StepBox title="Zamów kuriera" description="kurier przyjedzie w dogodnym terminie"/>
             </div>
         )
     }
