@@ -1,0 +1,17 @@
+.contact {
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(rgba(233, 235, 214, 0.6),$bg),url(./../../assets/contact-form.jpg);
+    background-size: cover;
+    @include centralize;
+    &__empty {
+        width: 60%;
+    }  
+    &__form {
+        width: 40%;
+        form {
+            flex-direction: column;
+            @include centralize;
+        }
+    }
+}
