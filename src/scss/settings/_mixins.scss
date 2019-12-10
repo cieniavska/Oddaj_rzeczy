@@ -1,0 +1,12 @@
+@mixin centralize() {
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin clearfix() {
+    &::after {
+        display: block;
+        content: "";
+        clear: both;
+      }
+}

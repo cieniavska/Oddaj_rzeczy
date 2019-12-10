@@ -2,9 +2,23 @@
 @import './settings/reset';
 @import './settings/colors';
 @import './settings/fonts';
+@import './settings/flex';
+@import './settings/mixins';
+
+@import './components/home';
+@import './components/navigation';
+@import './components/hero';
+@import './components/columns';
+
 
 
 html, body {
+    font-size: 16px;
     font-family: $font-base;
+}
+
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
 }
 

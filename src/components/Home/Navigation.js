@@ -1,20 +1,20 @@
 import React, {Component} from "react";
 import {
-    Link,
+    NavLink,
 } from 'react-router-dom';
 
 class Navigation extends Component {
     render() {
         return (
-            <div>
+            <nav>
                 <ul>
-                    <li><Link to="/">Start</Link></li>
-                    <li><Link to="/explanation">O co chodzi?</Link></li>
-                    <li><Link to="/about">O nas</Link></li>
-                    <li><Link to="/collab">Fundacja i organizacje</Link></li>
-                    <li><Link to="/contact">Kontakt</Link></li>
+                    <li><NavLink to="/" className="link">Start</NavLink></li>
+                    <li><NavLink to="/explanation" className="link">O co chodzi?</NavLink></li>
+                    <li><NavLink to="/about" className="link">O nas</NavLink></li>
+                    <li><NavLink to="/collab" className="link">Fundacja i organizacje</NavLink></li>
+                    <li><NavLink to="/contact" className="link">Kontakt</NavLink></li>
                 </ul>
-            </div>
+            </nav>
         )
     }
 }
