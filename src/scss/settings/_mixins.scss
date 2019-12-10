@@ -10,3 +10,10 @@
         clear: both;
       }
 }
+
+@mixin decoration() {
+    margin-top: 25px;
+    background-image: url(./../../assets/Decoration.svg);
+    height: 33px;
+    width: 253px;
+}

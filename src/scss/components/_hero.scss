@@ -29,10 +29,7 @@
             font-size: 2.2rem;
         }
         &__decoration {
-            margin-top: 25px;
-            background-image: url(./../../assets/Decoration.svg);
-            height: 33px;
-            width: 253px;
+            @include decoration;
         }
         &__btns {
             font-size: 2.2rem;

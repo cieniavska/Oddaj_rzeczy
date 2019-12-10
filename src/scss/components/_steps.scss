@@ -1,0 +1,14 @@
+.steps {
+    @include centralize;
+    flex-direction: column;
+    &__title {
+        padding-top: 20px;
+        font-size: 1.8rem;
+    }
+    &__decoration {
+        @include decoration;
+    }
+    &__box {
+        flex-direction: column;
+    }
+}
