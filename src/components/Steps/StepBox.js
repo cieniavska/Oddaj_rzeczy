@@ -6,6 +6,7 @@ class StepBox extends Component {
             <div className="steps__box flex">
                 <div className="steps__box__icon"></div>
                 <div className="steps__box__title">{this.props.title}</div>
+                <div className="steps__box__line"></div>
                 <div className="steps__box__description">{this.props.description}</div>
             </div>
         )

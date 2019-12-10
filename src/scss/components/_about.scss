@@ -1,0 +1,31 @@
+.about {
+    width: 100vw;
+    height: 75vh;
+    background-color: $bg;
+    flex-direction: row;
+    justify-content: space-between;
+    &__text {
+        @include centralize;
+        padding: 70px;
+        flex-direction: column;
+        font-size: 1.3rem;
+        text-align: center;
+        font-weight: normal;
+        color: $text;
+        width: 50%;
+        &:after {
+            content: '';
+            display: block;
+            margin: 20px 0 0 300px;
+            background-image: url(./../../assets/Signature.svg);
+            background-size: cover;
+            width: 140px;
+            height: 100px;
+        }
+    }
+    &__image {
+        background-image: url(./../../assets/People.jpg);
+        background-size: cover;
+        width: 50%;
+    }
+}

@@ -2,7 +2,7 @@
     @include centralize;
     flex-direction: column;
     &__title {
-        padding-top: 20px;
+        padding-top: 10px;
         font-size: 1.8rem;
     }
     &__decoration {
@@ -10,7 +10,8 @@
     }
     &__boxes {
         text-align: center;
-        padding-top: 20px;
+        margin-top: 20px;
+        padding: 20px;
         @include centralize;
         background-color: $bg;
     }
@@ -21,9 +22,18 @@
         &__title {
             font-size: 1.1rem;
         }
+        &__line {
+            width: 80px;
+            margin: 7px;
+            border-bottom: 1px solid $text;
+        }
         &__description {
             font-size: 1rem;
         }
+    }
+
+    &__container {
+        justify-content: center;
     }
 }
 

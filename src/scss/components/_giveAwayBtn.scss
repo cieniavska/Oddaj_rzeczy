@@ -1,0 +1,14 @@
+.giveAwayBtn {
+    font-size: 2.2rem;
+    font-weight: lighter;
+    @include centralize;
+    text-align: center;
+    border: 1px solid $text;
+    width: 310px;
+    height: 120px;
+    margin: 25px;
+    .link {
+        text-decoration: none;
+        color: $text;
+    }
+}
