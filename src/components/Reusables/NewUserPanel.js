@@ -11,7 +11,7 @@ class NewUserPanel extends Component {
             <>
             <LoginPanel/>
             <Navigation/>
-            <div className="userPanel flex">
+            <div name="newUserPanel" className="userPanel flex">
                 <SectionTitle title="Zarejestruj się"/>
                 <Form/>
             </div>

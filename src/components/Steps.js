@@ -3,7 +3,6 @@ import SectionTitle from "./Reusables/SectionTitle";
 import StepBoxes from "./Steps/StepBoxes";
 import GiveAwayBtn from "./Reusables/GiveAwayBtn";
 
-
 class Steps extends Component {
     render() {
         return (

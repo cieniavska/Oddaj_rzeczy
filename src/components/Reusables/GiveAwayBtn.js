@@ -1,13 +1,17 @@
 import React, {Component} from "react";
-import {
-    Link,
-} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
+import { Link } from 'react-scroll';
+
 
 class GiveAwayBtn extends Component {
     render() {
         return (
             <>
-             <div className="giveAwayBtn flex"><Link to="giveAway" className="link">ODDAJ RZECZY</Link></div>
+             <div className="giveAwayBtn flex">
+                 <Link to="userPanel" smooth={true}>
+                    <NavLink to="/userPanel" className="link">ODDAJ RZECZY</NavLink>
+                </Link>
+             </div>
             </>
         )
     }

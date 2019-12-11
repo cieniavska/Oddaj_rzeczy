@@ -11,7 +11,7 @@ class UserPanel extends Component {
             <>
             <LoginPanel/>
             <Navigation/>
-            <div className="userPanel flex">
+            <div name="userPanel" className="userPanel flex">
                 <SectionTitle title="Zaloguj się"/>
                 <Form/>
             </div>

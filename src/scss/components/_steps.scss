@@ -34,6 +34,10 @@
 
     &__container {
         justify-content: center;
+        .link {
+            text-decoration: none;
+            color: $text;
+        }
     }
 }
 
