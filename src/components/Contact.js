@@ -1,7 +1,6 @@
 import React, {Component} from "react";
 import SectionTitle from './Reusables/SectionTitle';
 
-
 class Contact extends Component {
     render() {
         return (
@@ -24,7 +23,7 @@ class Contact extends Component {
                             <label>Wpisz swoją wiadomość</label>
                             <textarea></textarea>
                         </div>
-                        <input className="submit"name="submit" type="submit"></input>
+                        <input className="submit" value="Wyślij" type="submit"></input>
                     </form>
                 </div>
             </div>

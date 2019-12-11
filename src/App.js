@@ -11,6 +11,7 @@ import UserPanel from './components/Reusables/UserPanel';
 import NewUserPanel from './components/Reusables/NewUserPanel';
 import About from './components/About';
 import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -29,7 +30,7 @@ function App() {
         <Steps/>
         <About/>
         <Contact/>
-
+        <Footer/>
        </>
      </HashRouter>
     </div>

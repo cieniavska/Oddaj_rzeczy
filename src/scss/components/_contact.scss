@@ -1,7 +1,7 @@
 .contact {
     width: 100vw;
     height: 100vh;
-    background-image: linear-gradient(rgba(231, 227, 189, 0.6),$bg),url(./../../assets/contact-form.jpg);
+    background-image: linear-gradient(rgba(243, 243, 241, 0.753),$bg),url(./../../assets/contact-form.jpg);
     background-size: cover;
     @include centralize;
     &__empty {
@@ -51,7 +51,7 @@
                 background-color: transparent;
                 border: .7px solid $text;
                 padding: 10px;
-                margin-left: 200px;
+                margin-left: 300px;
             }
         }
     }
