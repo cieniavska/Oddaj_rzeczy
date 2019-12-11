@@ -12,6 +12,7 @@ import NewUserPanel from './components/Reusables/NewUserPanel';
 import About from './components/About';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Collab from './components/Collab';
 
 
 function App() {
@@ -26,9 +27,11 @@ function App() {
           <Route path='/steps' component={Steps}/>
           <Route path='/about' component={About}/>
           <Route path='/contact' component={Contact}/>
+          <Route path='/collab' component={Collab}/>
         </Switch>
         <Steps/>
         <About/>
+        <Collab/>
         <Contact/>
         <Footer/>
        </>

@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {NavLink} from 'react-router-dom';
+import {Link as Anchor} from 'react-router-dom';
 import { Link } from 'react-scroll';
 
 
@@ -9,7 +9,7 @@ class GiveAwayBtn extends Component {
             <>
              <div className="giveAwayBtn flex">
                  <Link to="userPanel" smooth={true}>
-                    <NavLink to="/userPanel" className="link">ODDAJ RZECZY</NavLink>
+                    <Anchor to="/userPanel" className="link">ODDAJ RZECZY</Anchor>
                 </Link>
              </div>
             </>

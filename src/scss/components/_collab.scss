@@ -1,0 +1,12 @@
+.collab__container {
+    padding: 0 250px;
+    text-align: center;
+    flex-direction: column;
+    @include centralize;
+    &__partner {
+        font-size: 1rem;
+        border: none;
+        padding: 30px;
+        margin: 10px;
+    }
+}
