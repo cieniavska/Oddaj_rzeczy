@@ -9,11 +9,11 @@ class Navigation extends Component {
         return (
             <nav>
                 <ul>
-                    <li><NavLink to="/" smooth={true} className="link">Start</NavLink></li>
-                    <li><Link to="steps" smooth={true} className="link">O co chodzi?</Link></li>
-                    <li><Link to="about" smooth={true} className="link">O nas</Link></li>
-                    <li><Link to="collab" smooth={true} className="link">Fundacja i organizacje</Link></li>
-                    <li><Link to="contact" smooth={true} className="link">Kontakt</Link></li>
+                    <li><NavLink to="/" smooth={"true"} className="link">Start</NavLink></li>
+                    <li><Link to="steps" smooth={"true"} className="link">O co chodzi?</Link></li>
+                    <li><Link to="about" smooth={"true"} className="link">O nas</Link></li>
+                    <li><Link to="collab" smooth={"true"} className="link">Fundacja i organizacje</Link></li>
+                    <li><Link to="contact" smooth={"true"} className="link">Kontakt</Link></li>
                 </ul>
             </nav>
         )
