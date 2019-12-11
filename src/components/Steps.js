@@ -8,7 +8,7 @@ class Steps extends Component {
     render() {
         return (
             <>
-                <SectionTitle title="Wystarczą 4 proste kroki"/>
+                <SectionTitle name="steps" title="Wystarczą 4 proste kroki"/>
                 <StepBoxes/>
                 <div className="steps__container flex">
                 <GiveAwayBtn/>

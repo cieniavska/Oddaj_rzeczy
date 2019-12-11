@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import {Link} from 'react-router-dom';
 
 class Hero extends Component {
     render() {
@@ -11,8 +12,8 @@ class Hero extends Component {
                     <span>Oddaj niechciane rzeczy w zaufane ręce</span>
                     <div className="hero__welcomeBox__decoration"></div>
                     <div className="hero__welcomeBox__btns flex">
-                        <div className="flex">ODDAJ RZECZY</div>
-                        <div className="flex">ZORGANIZUJ ZBIÓRKĘ</div>
+                        <Link to="/userPanel" className="link"><div className="flex">ODDAJ RZECZY</div></Link>
+                        <Link to ="/userPanel" className="link"><div className="flex">ZORGANIZUJ ZBIÓRKĘ</div></Link>
                     </div>
                 </div>
             </header>

@@ -5,7 +5,7 @@ import SectionTitle from './Reusables/SectionTitle';
 class Contact extends Component {
     render() {
         return (
-            <div className="contact flex">
+            <div name="contact" className="contact flex">
                 <div className="contact__empty"></div>
                 <div className="contact__form">
                     <SectionTitle title="Skontaktuj się z nami"/>

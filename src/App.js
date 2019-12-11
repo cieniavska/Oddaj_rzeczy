@@ -26,6 +26,10 @@ function App() {
           <Route path='/about' component={About}/>
           <Route path='/contact' component={Contact}/>
         </Switch>
+        <Steps/>
+        <About/>
+        <Contact/>
+
        </>
      </HashRouter>
     </div>
