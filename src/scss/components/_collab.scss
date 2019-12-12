@@ -9,4 +9,32 @@
         padding: 30px;
         margin: 10px;
     }
+    &__button {
+        display: inline-block;
+        border: none;
+        font-size: 1rem;
+        border: .5px solid $text;
+        padding: 10px 9px;
+        margin: 20px 5px;
+    }
+    &__list {
+        margin: 20px;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        border-bottom: 1px solid $text;
+        font-weight: lighter;
+        &__first-box {
+            text-align: left;
+            &__title {
+                font-size: 1.5rem;
+            }
+            &_description {
+                font-size: 1.3rem;
+            }
+        }
+        &__second-box {
+            text-align: right;
+        }
+    }
 }
