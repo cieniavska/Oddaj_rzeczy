@@ -46,15 +46,39 @@ export default class Collab extends Component {
         }
     }
 
+    changeActivePage = (e,index) => {
+        this.setState({
+            activePage: index
+        })
+        console.log(index);
+    }
+
     displayButtons = () => {
         let i = 0;
         let buttons = [];
         while (i < this.state.availableButtons) {
           i++;
-          buttons.push(<button className="collab__container__button">{i}</button>);
+          buttons.push(<button key={i} onClick={ () => this.changeActivePage()} className="collab__container__button">{i}</button>);
         }
         return buttons;
       }
+
+    buildList = () => {
+          let array = organizations.organizations[this.state.activeView].foundations;
+          let list = array.map( (element,index) => {
+              return (
+                <div key={index} className="collab__container__list flex">
+                    <div className="collab__container__list__first-box">
+                        <div className="collab__container__list__first-box__title">{element.name}</div>
+                        <div className="collab__container__list__first-box__description">{element.mission}</div>
+                    </div>
+                    <div className="collab__container__list__second-box">{element.things}</div>
+                </div>
+              )
+        })
+        return list;
+      }
+
 
     render() {
         
@@ -77,6 +101,7 @@ export default class Collab extends Component {
                         <div>
                             <span>{organizations.organizations[this.state.activeView].description}</span>
                         </div>
+                            {this.buildList()}
                         <div className="collab__container__list flex">
                             <div className="collab__container__list__first-box">
                                 <div className="collab__container__list__first-box__title">{organizations.organizations[0].foundations[0].name}</div>
