@@ -46,21 +46,19 @@ export default class Collab extends Component {
         }
     }
 
-    changeActivePage = (e,index) => {
+    changeActivePage = (passedButtonNumber) => {
         this.setState({
-            activePage: index
+            activePage: passedButtonNumber
         })
-        console.log(index);
+        console.log(passedButtonNumber);
     }
 
-    displayButtons = () => {
-        let i = 0;
-        let buttons = [];
-        while (i < this.state.availableButtons) {
-          i++;
-          buttons.push(<button key={i} onClick={ () => this.changeActivePage()} className="collab__container__button">{i}</button>);
-        }
-        return buttons;
+      buildButtons = () => {
+          let buttons = [];
+          for (let i=1; i <= this.state.availableButtons; i++) {
+            buttons.push(<button key={i} onClick={ () => this.changeActivePage(i)} className="collab__container__button">{i}</button>);
+          }
+          return buttons;
       }
 
     buildList = () => {
@@ -81,6 +79,10 @@ export default class Collab extends Component {
 
 
     render() {
+
+        if (this.state.activePage === 1) {
+            this.buildList.slice(0,3)
+        }
         
         
         return (
@@ -111,7 +113,7 @@ export default class Collab extends Component {
                         </div>
                         <div className="collab__container__buttons">
                             
-                            {this.displayButtons()}
+                            {this.buildButtons()}
                         </div>
                     </div>
             </div>
