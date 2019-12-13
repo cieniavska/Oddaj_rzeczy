@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import LoginPanel from './../Home/LoginPanel';
 import Navigation from './../Home/Navigation';
+import LoginRegisterBtns from './../Reusables/LoginRegisterBtns';
 import SectionTitle from './SectionTitle';
 import Form from './Form';
 
@@ -14,6 +15,9 @@ class NewUserPanel extends Component {
             <div name="newUserPanel" className="userPanel flex">
                 <SectionTitle title="Zarejestruj się"/>
                 <Form/>
+                <LoginRegisterBtns firstBtn="zaloguj się"
+                firstPath="/userPanel"
+                secondBtn="zarejestruj się"/>
             </div>
             </>
         )
