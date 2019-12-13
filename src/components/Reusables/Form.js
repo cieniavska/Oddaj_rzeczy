@@ -9,6 +9,7 @@ class Form extends Component {
                     <input name='email' type='email'></input>
                     <label for='email'>Hasło</label>
                     <input name='password'type='password'></input>
+                    {this.props.children}
                 </form>
             </div>
         )
