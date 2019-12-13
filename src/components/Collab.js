@@ -6,7 +6,7 @@ import organizations from './../data/organizations';
 export default class Collab extends Component {
 
     state = {
-        activeView: 0,
+        activeView: 1,
         availableButtons: 2,
         activePage: 1
     }
@@ -88,6 +88,11 @@ export default class Collab extends Component {
         } else {
             displayedList = this.buildList()
         }
+
+        let displayedButtons;
+        if (this.state.availableButtons > 0) {
+            displayedButtons = this.buildButtons();
+        }
         
         
         return (
@@ -111,7 +116,7 @@ export default class Collab extends Component {
                             {displayedList}
                         <div className="collab__container__buttons">
                             
-                            {this.buildButtons()}
+                            {displayedButtons}
                         </div>
                     </div>
             </div>
