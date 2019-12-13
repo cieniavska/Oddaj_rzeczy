@@ -42,14 +42,10 @@
 }
 
 @for $i from 1 through 4 {
-    .steps__box:nth-of-type(#{i}) .steps__box_icon {
+
+    .steps__box:nth-of-type(#{$i}) .steps__box__icon {
         background-image: url(./../../assets/Icon-#{$i}.svg);
         width: 83px;
         height: 83px;
     }
-    // .steps__box__icon:nth-child(#{$i}) {
-    //     background-image: url(./../../assets/Icon-#{$i}.svg);
-    //     width: 83px;
-    //     height: 83px;
-    // }
 }
