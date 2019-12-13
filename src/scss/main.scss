@@ -30,10 +30,12 @@ html, body {
     font-size: 16px;
     font-family: $font-base;
     color: $text;
+    overflow-x: hidden;
 }
 
 .container {
     max-width: 1024px;
+    max-height: 100%;
     margin: 0 auto;
 }
 

@@ -24,10 +24,8 @@ export default class Collab extends Component {
             if (numberOfPositions % 3 === 0) {
                 howManyButtons = numberOfPositions / 3;
             } else if (numberOfPositions === 3) {
-                howManyButtons = 1;
-            } else {
                 howManyButtons = 0;
-            }
+            } 
 
         this.setState({
             activeView: viewNum,
@@ -80,8 +78,15 @@ export default class Collab extends Component {
 
     render() {
 
+        let displayedList;
         if (this.state.activePage === 1) {
-            this.buildList.slice(0,3)
+            displayedList = this.buildList().slice(0,3)
+        } else if (this.state.activePage === 2) {
+            displayedList = this.buildList().slice(3,6)
+        } else if (this.state.activePage === 3) {
+            displayedList = this.buildList().slice(6,9)
+        } else {
+            displayedList = this.buildList()
         }
         
         
@@ -103,14 +108,7 @@ export default class Collab extends Component {
                         <div>
                             <span>{organizations.organizations[this.state.activeView].description}</span>
                         </div>
-                            {this.buildList()}
-                        <div className="collab__container__list flex">
-                            <div className="collab__container__list__first-box">
-                                <div className="collab__container__list__first-box__title">{organizations.organizations[0].foundations[0].name}</div>
-                                <div className="collab__container__list__first-box__description">{organizations.organizations[0].foundations[0].mission}</div>
-                            </div>
-                            <div className="collab__container__list__second-box">{organizations.organizations[0].foundations[0].things}</div>
-                        </div>
+                            {displayedList}
                         <div className="collab__container__buttons">
                             
                             {this.buildButtons()}

@@ -1,16 +1,12 @@
 import React, {Component} from "react";
-import {Link as Anchor} from 'react-router-dom';
-import { Link } from 'react-scroll';
-
+import {Link } from 'react-router-dom';
 
 class GiveAwayBtn extends Component {
     render() {
         return (
             <>
              <div className="giveAwayBtn flex">
-                 <Link to="userPanel" smooth={true}>
-                    <Anchor to="/userPanel" className="link">ODDAJ RZECZY</Anchor>
-                </Link>
+                    <Link to="/userPanel" className="link">ODDAJ RZECZY</Link>
              </div>
             </>
         )
