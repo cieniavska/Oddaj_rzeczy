@@ -1,0 +1,6 @@
+.logout {
+    @include regularBtn;
+    border: 1px solid $text;
+    padding: 17px;
+    border-radius: 2px;
+}
