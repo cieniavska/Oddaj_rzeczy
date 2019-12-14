@@ -1,11 +1,10 @@
-import React, {Component} from "react";
+import React from "react";
 import { Link } from 'react-scroll';
 import { NavLink } from 'react-router-dom';
 
 
 
-class Navigation extends Component {
-    render() {
+function Navigation() {
         return (
             <nav>
                 <ul>
@@ -17,7 +16,6 @@ class Navigation extends Component {
                 </ul>
             </nav>
         )
-    }
-}
+};
 
 export default Navigation;

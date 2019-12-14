@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React from "react";
 import LoginPanel from './../Home/LoginPanel';
 import Navigation from './../Home/Navigation';
 import SectionTitle from './SectionTitle';
@@ -6,8 +6,7 @@ import Form from './Form';
 import LoginRegisterBtns from './../Reusables/LoginRegisterBtns';
 
 
-class UserPanel extends Component {
-    render() {
+function UserPanel() {
         return (
             <>
             <LoginPanel/>
@@ -22,7 +21,6 @@ class UserPanel extends Component {
             </div>
             </>
         )
-    }
-}
+};
 
 export default UserPanel;

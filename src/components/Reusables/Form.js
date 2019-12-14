@@ -1,7 +1,6 @@
-import React, {Component} from "react";
+import React  from "react";
 
-class Form extends Component {
-    render() {
+function Form() {
         return (
             <div className="form__container flex">
                 <form className="form__login flex">
@@ -13,7 +12,6 @@ class Form extends Component {
                 </form>
             </div>
         )
-    }
-}
+};
 
 export default Form;

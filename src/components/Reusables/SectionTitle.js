@@ -1,14 +1,12 @@
-import React, {Component} from "react";
+import React from "react";
 
-class SectionTitle extends Component {
-    render() {
+function SectionTitle(props) {
         return (
             <div className="steps container flex">
-                <span className="steps__title">{this.props.title}</span>
+                <span className="steps__title">{props.title}</span>
                 <span className="steps__decoration"></span>
             </div>
         )
-    }
-}
+};
 
 export default SectionTitle;

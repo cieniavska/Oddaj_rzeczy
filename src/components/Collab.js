@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import SectionTitle from './../components/Reusables/SectionTitle';
 import organizations from './../data/organizations';
 
-
 export default class Collab extends Component {
 
     state = {
@@ -13,14 +12,8 @@ export default class Collab extends Component {
 
     changeView = (viewNum) => {
 
-        console.log(
-            organizations.organizations[0].foundations.length,
-            organizations.organizations[1].foundations.length,
-            organizations.organizations[2].foundations.length,
-            );
-
             let howManyButtons;
-            let numberOfPositions = parseInt(organizations.organizations[this.state.activeView].foundations.length);
+            let numberOfPositions = parseInt(organizations.organizations[viewNum].foundations.length);
             if (numberOfPositions % 3 === 0) {
                 howManyButtons = numberOfPositions / 3;
             } else if (numberOfPositions === 3) {
@@ -35,13 +28,7 @@ export default class Collab extends Component {
     }
 
     showIndexDescription = () => {
-        if (this.state.activeView === "0") {
-            return 0;
-        } else if (this.state.activeView === "1") {
-            return 1;
-        } else {
-            return 2;
-        }
+        return Number(this.state.activeView)
     }
 
     changeActivePage = (passedButtonNumber) => {
@@ -88,6 +75,12 @@ export default class Collab extends Component {
         } else {
             displayedList = this.buildList()
         }
+
+        // for (let i=0; i < this.buildList().length; i++) {
+        //     if (this.state.activePage === i + 1) {
+        //         displayedList = this.buildList().slice(i * 3,i + 3)
+        //     }
+        // }
 
         let displayedButtons;
         if (this.state.availableButtons > 0) {

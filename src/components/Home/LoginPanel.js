@@ -1,8 +1,7 @@
-import React, {Component} from "react";
+import React from "react";
 import { Link } from 'react-router-dom';
 
-class LoginPanel extends Component {
-    render() {
+function LoginPanel() {
         return (
             <div className="loginPanel">
             <ul>
@@ -11,7 +10,6 @@ class LoginPanel extends Component {
             </ul>
             </div>
         )
-    }
-}
+};
 
 export default LoginPanel;

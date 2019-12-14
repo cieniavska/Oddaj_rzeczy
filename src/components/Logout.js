@@ -1,12 +1,11 @@
-import React, {Component} from "react";
+import React from "react";
 import LoginPanel from './Home/LoginPanel';
 import Navigation from './Home/Navigation';
 import SectionTitle from './Reusables/SectionTitle';
 import { Link } from 'react-router-dom';
 
 
-class Logout extends Component {
-    render() {
+function Logout() {
         return (
             <>
                 <LoginPanel/>
@@ -19,7 +18,6 @@ class Logout extends Component {
                 </div>
             </>
         )
-    }
-}
+};
 
 export default Logout;

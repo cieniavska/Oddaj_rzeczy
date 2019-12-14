@@ -1,8 +1,7 @@
-import React, {Component} from "react";
+import React from "react";
 import StepBox from './StepBox';
 
-class StepBoxes extends Component {
-    render() {
+function StepBoxes() {
         return (
             <div className="steps__boxes flex">
                 <StepBox title="Wybierz rzeczy" description="ubrania, zabawki, sprzęt i inne"/>
@@ -11,7 +10,6 @@ class StepBoxes extends Component {
                 <StepBox title="Zamów kuriera" description="kurier przyjedzie w dogodnym terminie"/>
             </div>
         )
-    }
-}
+};
 
 export default StepBoxes;
