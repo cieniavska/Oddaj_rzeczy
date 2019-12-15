@@ -46,6 +46,10 @@
                 height: 50%;
                 width: 100%;
                 flex-direction: column;
+                .error {
+                    font-size: 1rem;
+                    color: red;
+                }
             }
             .submit {
                 width: 30%;
