@@ -13,7 +13,7 @@ export default class Collab extends Component {
     changeView = (viewNum) => {
 
             let howManyButtons;
-            let numberOfPositions = parseInt(organizations.organizations[viewNum].foundations.length);
+            let numberOfPositions = parseInt(organizations.organizations[viewNum].foundations.length, 10);
             if (numberOfPositions % 3 === 0) {
                 howManyButtons = numberOfPositions / 3;
             } else if (numberOfPositions === 3) {
@@ -35,7 +35,6 @@ export default class Collab extends Component {
         this.setState({
             activePage: passedButtonNumber
         })
-        console.log(passedButtonNumber);
     }
 
       buildButtons = () => {
@@ -55,7 +54,7 @@ export default class Collab extends Component {
                         <div className="collab__container__list__first-box__title">{element.name}</div>
                         <div className="collab__container__list__first-box__description">{element.mission}</div>
                     </div>
-                    <div className="collab__container__list__second-box">{element.things}</div>
+                    <div className="collab__list__second-box">{element.things}</div>
                 </div>
               )
         })
@@ -75,13 +74,6 @@ export default class Collab extends Component {
         } else {
             displayedList = this.buildList()
         }
-
-        // for (let i=0; i < this.buildList().length; i++) {
-        //     if (this.state.activePage === i + 1) {
-        //         displayedList = this.buildList().slice(i * 3,i + 3)
-        //     }
-        // }
-
         let displayedButtons;
         if (this.state.availableButtons > 0) {
             displayedButtons = this.buildButtons();
