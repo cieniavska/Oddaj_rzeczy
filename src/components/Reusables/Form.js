@@ -1,6 +1,6 @@
 import React  from "react";
 
-function Form() {
+function Form(props) {
         return (
             <div className="form__container flex">
                 <form className="form__login flex">
@@ -8,7 +8,7 @@ function Form() {
                     <input name='email' type='email'></input>
                     <label for='email'>Hasło</label>
                     <input name='password'type='password'></input>
-                    {this.props.children}
+                    {props.children}
                 </form>
             </div>
         )

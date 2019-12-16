@@ -39,11 +39,11 @@ class Contact extends Component {
                     <SectionTitle title="Skontaktuj się z nami"/>
                     <form onSubmit={this.handleSubmitForm} className="flex">
                         <div className="nameEmail flex">
-                            <div className="nameEmail_first">
+                            <div className="nameEmail__first">
                                 <label>Wpisz swoje imię</label>
                                 <input name="name" type="text" value={this.state.name} onChange={this.handleChange}></input>
                             </div>
-                            <div className="nameEmail_second">
+                            <div className="nameEmail__second">
                                 <label>Wpisz swój email</label>
                                 <input name="email" type="email" value={this.state.email} onChange={this.handleChange}></input>
                             </div>

@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function LoginRegisterBtns() {
+function LoginRegisterBtns(props) {
         return (
                 <div className="loginRegisterBtns flex">
-                    <Link to={this.props.firstPath}> <button to={this.props.firstPath} className="loginRegisterBtns__first">{this.props.firstBtn}</button></Link>
-                    <button to={this.props.secondPath} className="loginRegisterBtns__second">{this.props.secondBtn}</button>
+                    <Link to={props.firstPath}> <button to={props.firstPath} className="loginRegisterBtns__first">{props.firstBtn}</button></Link>
+                    <button to={props.secondPath} className="loginRegisterBtns__second">{props.secondBtn}</button>
                 </div>
         )
 };

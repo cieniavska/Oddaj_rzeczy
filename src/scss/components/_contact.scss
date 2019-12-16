@@ -14,10 +14,10 @@
             font-size: 1.1rem;
             flex-direction: column;
             .nameEmail {
-                justify-content: space-evenly;
+                justify-content: space-between;
                 &__first {
                     width: 50%;
-                    padding-right: 30px;
+                    margin: 0 30px 10px 0;
                 }
                 &__second {
                     width: 50%;
