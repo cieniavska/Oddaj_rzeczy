@@ -14,7 +14,10 @@
 @import './components/giveAwayBtn';
 
 @import './components/form';
+@import './components/loginRegisterBtns';
 @import './components/userPanel';
+@import './components/logout';
+
 @import './components/about';
 @import './components/collab';
 @import './components/contact';
@@ -30,10 +33,12 @@ html, body {
     font-size: 16px;
     font-family: $font-base;
     color: $text;
+    overflow-x: hidden;
 }
 
 .container {
     max-width: 1024px;
+    max-height: 100%;
     margin: 0 auto;
 }
 

@@ -1,8 +1,7 @@
-import React, {Component} from "react";
+import React from "react";
 import HomeOneColumn from './HomeOneColumn';
 
-class HomeThreeColumns extends Component {
-    render() {
+function HomeThreeColumns() {
         return (
             <div className="columns">
               <div className="container flex">
@@ -12,7 +11,6 @@ class HomeThreeColumns extends Component {
               </div>
             </div>
         )
-    }
 };
 
 export default HomeThreeColumns;

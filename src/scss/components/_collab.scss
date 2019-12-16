@@ -1,12 +1,47 @@
 .collab__container {
+    margin: 28px 0;
     padding: 0 250px;
     text-align: center;
     flex-direction: column;
     @include centralize;
     &__partner {
+        cursor: pointer;
         font-size: 1rem;
         border: none;
         padding: 30px;
-        margin: 10px;
+        margin: 12px 10px;
+        &:hover {
+            border: .5px solid $text;
+        }
+    }
+    &__button {
+        cursor: pointer;
+        display: inline-block;
+        border: none;
+        font-size: 1rem;
+        border: .5px solid $text;
+        padding: 10px 9px;
+        margin: 20px 5px;
+    }
+    &__list {
+        margin: 20px;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        border-bottom: 1px solid $text;
+        font-weight: lighter;
+        &__first-box {
+            padding: 10px;
+            text-align: left;
+            &__title {
+                font-size: 1.5rem;
+            }
+            &_description {
+                font-size: 1.3rem;
+            }
+        }
+        &__second-box {
+            text-align: right;
+        }
     }
 }

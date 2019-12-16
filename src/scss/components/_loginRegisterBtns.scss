@@ -1,0 +1,16 @@
+.loginRegisterBtns {
+    margin: 20px;
+    width: 400px;
+    justify-content: space-between;
+    align-items: center;
+    &__first, &__second {
+        border: none;
+        font-weight: lighter;
+        font-size: 1rem;
+        color: $text;
+        cursor: pointer;
+    }
+    &__second {
+        @include borderBtn;
+    }
+}

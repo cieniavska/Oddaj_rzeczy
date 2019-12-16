@@ -1,9 +1,8 @@
-import React, {Component} from "react";
+import React from "react";
 import SectionTitle from "./Reusables/SectionTitle";
 
 
-class About extends Component {
-    render() {
+function About() {
         return (
             <div name="about" className="about flex">
                 <div className="about__text flex">
@@ -13,7 +12,6 @@ class About extends Component {
                 <div className="about__image"></div>
             </div>
         )
-    }
-}
+};
 
 export default About;

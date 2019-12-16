@@ -1,16 +1,14 @@
-import React, {Component} from "react";
+import React from "react";
 
 
-class HomeOneColumn extends Component {
-    render() {
+function HomeOneColumn(props) {
         return (
             <div className="column flex">
-                <div className="column__number">{this.props.number}</div>
-                <div className="column__title">{this.props.title}</div>
-                <div className="column__description">{this.props.body}</div>
+                <div className="column__number">{props.number}</div>
+                <div className="column__title">{props.title}</div>
+                <div className="column__description">{props.body}</div>
             </div>
         )
-    }
-};
+}
 
 export default HomeOneColumn;

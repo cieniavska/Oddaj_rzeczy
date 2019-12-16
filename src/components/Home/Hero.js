@@ -1,8 +1,7 @@
-import React, {Component} from "react";
+import React from "react";
 import {Link} from 'react-router-dom';
 
-class Hero extends Component {
-    render() {
+function Hero() {
         return (
             <header className="hero flex">
                 <div className="hero__image"></div>
@@ -19,6 +18,5 @@ class Hero extends Component {
             </header>
         )
     }
-}
 
 export default Hero;

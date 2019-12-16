@@ -1,7 +1,6 @@
-import React, {Component} from "react";
+import React  from "react";
 
-class Form extends Component {
-    render() {
+function Form(props) {
         return (
             <div className="form__container flex">
                 <form className="form__login flex">
@@ -9,10 +8,10 @@ class Form extends Component {
                     <input name='email' type='email'></input>
                     <label for='email'>Hasło</label>
                     <input name='password'type='password'></input>
+                    {props.children}
                 </form>
             </div>
         )
-    }
-}
+};
 
 export default Form;
