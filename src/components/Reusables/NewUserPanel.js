@@ -15,7 +15,7 @@ class NewUserPanel extends Component {
             <div name="newUserPanel" className="userPanel flex">
                 <SectionTitle title="Zarejestruj się"/>
                 <Form>
-                    <label for='email'>Powtórz hasło</label>
+                    <label>Powtórz hasło</label>
                     <input name='password'type='confirm-password'></input>
                 </Form>
                 <LoginRegisterBtns firstBtn="zaloguj się"
