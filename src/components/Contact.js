@@ -48,7 +48,7 @@ class Contact extends Component {
             }
         }
         else { 
-            fetch(`http://localhost:3001/messages`,{
+            fetch(`https://fer-api.coderslab.pl/v1/portfolio/contact`,{
                 method: 'POST',
                 body: JSON.stringify({id: this.state.id, name: this.state.name, email: this.state.email, msg: this.state.msg}),
                 headers: {
