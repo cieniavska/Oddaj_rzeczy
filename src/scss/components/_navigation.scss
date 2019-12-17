@@ -4,8 +4,14 @@ nav {
     top: 4%;
     right: 5%;
     li:first-child {
-        border: 1px solid $text;
+        border: 1.2px solid $text;
         padding: 9px 20px;
+        &:hover {
+            color: $hover;
+            // background-color: $bg;
+            border: 1.2px solid $hover;
+            transition: .1s;
+        }
     }
     li {
         cursor: pointer;
@@ -13,6 +19,12 @@ nav {
         list-style: none;
         display: inline-block;
         margin-left: 2rem;
+        &:hover {
+            color: $hover;
+            padding-bottom: 10px;
+            transition: .2s;
+            border-bottom: 2px solid $hover;
+        }
         .link {
             text-decoration: none;
             color: $text;

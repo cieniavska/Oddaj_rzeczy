@@ -3,11 +3,9 @@ import { Link } from 'react-router-dom';
 
 function GiveAwayBtn() {
     return (
-            <>
-             <div className="giveAwayBtn flex">
-                    <Link to="/userPanel" className="link">ODDAJ RZECZY</Link>
-             </div>
-            </>
+                <Link to="/userPanel" className="link">
+                    <div className="giveAwayBtn flex">ODDAJ RZECZY</div>
+                </Link>
         )
 };
 

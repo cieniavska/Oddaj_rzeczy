@@ -45,6 +45,12 @@
                 width: 310px;
                 height: 120px;
                 margin: 25px;
+                &:hover {
+                    transition: .2s;
+                    color: $hover;
+                    background-color: $bg;
+                    border: $hover;
+                }
             }
         }
     }

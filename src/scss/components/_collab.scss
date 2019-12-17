@@ -10,6 +10,7 @@
         border: none;
         padding: 30px;
         margin: 12px 10px;
+        border: .5px solid transparent;
         &:hover {
             border: .5px solid $text;
         }
@@ -22,6 +23,12 @@
         border: .5px solid $text;
         padding: 10px 9px;
         margin: 20px 5px;
+        &:hover {
+            transition: .2s;
+            color: $hover;
+            background-color: $bg;
+            border: $hover;
+        }
     }
     &__list {
         margin: 20px;

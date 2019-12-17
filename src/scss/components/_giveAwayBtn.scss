@@ -11,4 +11,10 @@
         text-decoration: none;
         color: $text;
     }
+    &:hover {
+        transition: .2s;
+        color: $hover;
+        background-color: $bg;
+        border: $hover;
+    }
 }
