@@ -10,9 +10,14 @@
         border: none;
         padding: 30px;
         margin: 12px 10px;
-        border: .5px solid transparent;
-        &:hover {
-            border: .5px solid $text;
+        border: 1px solid transparent;
+        &:hover, &:active {
+            outline-color: $hover;
+            border: 1px solid $hover;
+        }
+        &:focus {
+            outline-color: $hover;
+            outline-width: 1px;
         }
     }
     &__button {
@@ -28,6 +33,9 @@
             color: $hover;
             background-color: $bg;
             border: $hover;
+        }
+        &:focus {
+            outline-color: $hover;
         }
     }
     &__list {

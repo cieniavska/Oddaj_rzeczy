@@ -1,19 +1,20 @@
 .form__container {
     .form__login {
         background-color: $bg;
-        padding: 50px 100px;
+        padding: 50px 80px;
         flex-direction: column;
         @include centralize;
         label {
             margin: 10px;
         }
         input {
+            font-size: 1rem;
             background-color: $bg;
             border: none;
             outline: none;
             border-bottom: 1px solid $text;
             margin: 10px;
-            width: 100%;
+            width: 60%;
         }
     }
 }

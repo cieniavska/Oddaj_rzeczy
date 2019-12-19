@@ -4,6 +4,7 @@
     justify-content: space-between;
     align-items: center;
     &__first, &__second {
+        background-color: $bg;
         border: none;
         font-weight: lighter;
         font-size: 1rem;

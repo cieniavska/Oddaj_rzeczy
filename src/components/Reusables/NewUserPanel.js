@@ -17,10 +17,10 @@ class NewUserPanel extends Component {
                 <Form>
                     <label for='email'>Powtórz hasło</label>
                     <input name='password'type='confirm-password'></input>
+                    <LoginRegisterBtns firstBtn="zaloguj się"
+                    firstPath="/userPanel"
+                    secondBtn="zarejestruj się"/>
                 </Form>
-                <LoginRegisterBtns firstBtn="zaloguj się"
-                firstPath="/userPanel"
-                secondBtn="zarejestruj się"/>
             </div>
             </>
         )

@@ -13,11 +13,12 @@ function UserPanel() {
             <Navigation/>
             <div name="userPanel" className="userPanel flex">
                 <SectionTitle title="Zaloguj się"/>
-                <Form/>
-                <LoginRegisterBtns 
-                firstBtn="załóż konto"
-                firstPath="/newUserPanel"
-                secondBtn="zaloguj się"/>
+                <Form>
+                    <LoginRegisterBtns 
+                    firstBtn="załóż konto"
+                    firstPath="/newUserPanel"
+                    secondBtn="zaloguj się"/>
+                </Form>
             </div>
             </>
         )
