@@ -13,6 +13,17 @@
         background-position-x: 98%;
         @include clearfix;
     }
+    &__image2 {
+        top: 0;
+        left: 0;
+        position: absolute;
+        height: 80vh;
+        width: 50vw;
+        background-image: url(./../../assets/Hero2.png);
+        background-size: cover;
+        background-position-x: 98%;
+        @include clearfix;
+    }
     &__emptySpace {
         width: 60%;
         height: 80vh;
@@ -30,6 +41,26 @@
         }
         &__decoration {
             @include decoration;
+        }
+        &__steps {
+            font-size: 2rem;
+            font-weight: lighter;
+            margin-bottom: 10px;
+        }
+        .steps__boxes {
+            flex-direction: row;
+            font-weight: lighter;
+            background-color: $bg2;
+            .steps__box {
+                border: .2px solid $text;
+                transform: rotate(45deg);
+                width: 120px;
+                height: 120px;
+            }
+            .steps__number, .steps__description {
+                font-size: 1.1rem;
+                transform: rotate(-45deg);
+            }
         }
         &__btns {
             font-size: 2.2rem;
