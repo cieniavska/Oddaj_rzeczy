@@ -3,14 +3,8 @@
     height: 80vh;
     background-image: url('./../../assets/teddy.png');
     background-size: cover;
+    align-items: center;
 }
-
 .giveAwaySteps {
-    height: 50vh;
-    &__firstBox {
-        width: 50%;
-    }
-    &__secondBox {
-        width: 50%;
-    }
+    width: 100%;
 }
