@@ -7,6 +7,8 @@ import Form from './Form';
 
 
 class NewUserPanel extends Component {
+
+    
     render() {
         return (
             <>
@@ -14,9 +16,7 @@ class NewUserPanel extends Component {
             <Navigation/>
             <div name="newUserPanel" className="userPanel flex">
                 <SectionTitle title="Zarejestruj się"/>
-                <Form>
-                    <label for='email'>Powtórz hasło</label>
-                    <input name='password'type='confirm-password'></input>
+                <Form isThisNewUser="true">
                     <LoginRegisterBtns firstBtn="zaloguj się"
                     firstPath="/userPanel"
                     secondBtn="zarejestruj się"/>
