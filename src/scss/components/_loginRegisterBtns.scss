@@ -10,6 +10,10 @@
         font-size: 1rem;
         color: $text;
         cursor: pointer;
+        &:hover {
+            transition: .2s;
+            color: $hover;
+        }
     }
     &__second {
         @include borderBtn;
