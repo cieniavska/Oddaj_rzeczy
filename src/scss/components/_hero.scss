@@ -69,6 +69,10 @@
                     left: 0;
                     transform: rotate(45deg);
                 }
+                &:hover {
+                    transition: .2s;
+                    color: $hover;
+                }
             }
             .steps__number, .steps__description {
                 font-size: 1.1rem;
