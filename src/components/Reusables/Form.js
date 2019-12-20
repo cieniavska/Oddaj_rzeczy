@@ -25,26 +25,23 @@ class Form extends Component {
             errorPassword: '',
             errorConfirm: ''
         })
+
+        if (!this.validateEmail(this.state.email)) {
+            this.setState({
+                errorEmail: "Podany email jest nieprawidłowy"
+            })
+        }
         
         if (this.state.password.length < 6) {
             this.setState({
                 errorPassword: "Podane hasło jest nieprawidłowe"
             })
-            return false;
         }
 
         if ((this.props.isThisNewUser === "true" && this.state.confirmPassword !== this.state.password) || this.state.confirmPassword === '') {       
             this.setState({
                 errorConfirm: "Podane hasła nie są takie same"
             })
-            return false;
-        }
-
-        if (!this.validateEmail(this.state.email)) {
-            this.setState({
-                errorEmail: "Podany email jest nieprawidłowy"
-            })
-            return false;
         }
     };
 
