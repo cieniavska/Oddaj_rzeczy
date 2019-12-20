@@ -3,6 +3,8 @@ import LoginPanel from './../components/Home/LoginPanel';
 import Navigation from './../components/Home/Navigation';
 import GiveAwayHero from "./GiveAwayForm/GiveAwayHero";
 import ImportantMsg from './../components/GiveAwayForm/ImportantMsg';
+import GiveAwaySteps from './../components/GiveAwayForm/GiveAwaySteps';
+
 import importantMessages from './../data/importantMessages';
 import Contact from './Contact';
 import Footer from './Footer';
@@ -16,6 +18,7 @@ function GiveAwayForm() {
                 <GiveAwayHero/>
             </div>
             <ImportantMsg title={"Ważne!"} text={importantMessages.messages[0].first}/>
+            <GiveAwaySteps/>
             <Contact/>
             <Footer/>
         </>
