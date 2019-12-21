@@ -5,6 +5,9 @@ import GiveAwayHero from "./GiveAwayForm/GiveAwayHero";
 import ImportantMsg from './../components/GiveAwayForm/ImportantMsg';
 import GiveAwaySteps from './../components/GiveAwayForm/GiveAwaySteps';
 import GiveAwayStepsFirst from './../components/GiveAwayForm/GiveAwayFirst';
+import GiveAwayStepsSecond from './../components/GiveAwayForm/GiveAwaySecond';
+import GiveAwayThankYou from './../components/GiveAwayForm/GiveAwayThankYou';
+
 
 
 import importantMessages from './../data/importantMessages';
@@ -20,7 +23,7 @@ function GiveAwayForm() {
                 <GiveAwayHero/>
             </div>
             <ImportantMsg title={"Ważne!"} text={importantMessages.messages[0].first}/>
-            <GiveAwaySteps><GiveAwayStepsFirst/></GiveAwaySteps>
+            <GiveAwaySteps><GiveAwayStepsSecond/></GiveAwaySteps>
             <Contact/>
             <Footer/>
         </>

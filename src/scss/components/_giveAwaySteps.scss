@@ -4,7 +4,12 @@
     background-image: url('./../../assets/teddy.png');
     background-size: cover;
     align-items: center;
+    position: relative;
 }
 .giveAwaySteps {
-    width: 100%;
+    &__firstBox {
+        position: absolute;
+        top: 15%;
+        left: 15%;
+    }
 }

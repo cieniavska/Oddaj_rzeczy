@@ -32,14 +32,15 @@
 }
 
 .next__button {
-    margin-top: 40px;
+    margin-right: 50px;
+    margin-top: 300px;
     border: none;
     border: .7px solid $text;
     font-size: 1rem;
     background-color: transparent;
     width: 100px;
     height: 60px;
-    border-radius: 3px;
+    border-radius: 1px;
     &:hover {
         transition: .2s;
         color: $hover;
