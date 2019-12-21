@@ -9,26 +9,26 @@ class GiveAwayStepsFirst extends Component {
     <div className="giveAwayStepsFirst flex">
         <span>Zaznacz, co chcesz oddać:</span>
         <form>
-            <label><input type="radio" name="reusable-clothes" />
-            ubrania, które nadają się do ponownego użycia </label>
-            
+            <label><input type="checkbox" name="reusable-clothes" />
+            ubrania, które nadają się do ponownego użycia
+            </label>
             <label>
-                <input type="radio" name="non-reusable-clothes" />
+                <input type="checkbox" name="non-reusable-clothes" />
                 ubrania do wyrzucenia
             </label>
             <label>
-                <input type="radio" name="toys" />
+                <input type="checkbox" name="toys" />
                 zabawki
             </label>
             <label>
-                <input type="radio" name="books" />
+                <input type="checkbox" name="books" />
                 książki
             </label>
             <label>
-                <input type="radio" name="other" />
+                <input type="checkbox" name="other" />
                 inne
             </label>
-                <input className="next__button" type="submit" value="Dalej"/>
+                <button className="next__button">Dalej</button>
         </form>
     </div>
     )

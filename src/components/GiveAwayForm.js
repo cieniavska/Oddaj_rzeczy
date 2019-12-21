@@ -23,7 +23,9 @@ function GiveAwayForm() {
                 <GiveAwayHero/>
             </div>
             <ImportantMsg title={"Ważne!"} text={importantMessages.messages[0].first}/>
-            <GiveAwaySteps><GiveAwayStepsSecond/></GiveAwaySteps>
+            <GiveAwaySteps>
+                <GiveAwayStepsSecond/>
+            </GiveAwaySteps>
             <Contact/>
             <Footer/>
         </>
