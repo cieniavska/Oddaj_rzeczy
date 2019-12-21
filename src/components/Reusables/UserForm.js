@@ -1,6 +1,6 @@
 import React, {Component}  from "react";
 
-class Form extends Component {
+class UserForm extends Component {
 
     state = {
         email: '',
@@ -15,7 +15,6 @@ class Form extends Component {
         this.setState({
           [e.target.name]: e.target.value
         });
-        console.log(this.state.email, this.state.password, this.state.confirmPassword)
       }
 
     handleSubmit = e => {
@@ -82,4 +81,4 @@ class Form extends Component {
 
 };
 
-export default Form;
+export default UserForm;
