@@ -1,27 +1,30 @@
-import React from "react";
+import React, {Component} from "react";
 import LoginPanel from './../Home/LoginPanel';
 import Navigation from './../Home/Navigation';
 import SectionTitle from './SectionTitle';
-import Form from './Form';
+import UserForm from './UserForm';
 import LoginRegisterBtns from './../Reusables/LoginRegisterBtns';
 
 
-function UserPanel() {
+class UserPanel extends Component {
+
+    render() {
         return (
             <>
             <LoginPanel/>
             <Navigation/>
             <div name="userPanel" className="userPanel flex">
                 <SectionTitle title="Zaloguj się"/>
-                <Form>
+                <UserForm isThisNewUser="false">
                     <LoginRegisterBtns 
                     firstBtn="załóż konto"
                     firstPath="/newUserPanel"
                     secondBtn="zaloguj się"/>
-                </Form>
+                </UserForm>
             </div>
             </>
         )
+    }
 };
 
 export default UserPanel;
