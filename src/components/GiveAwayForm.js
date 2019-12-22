@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Component} from "react";
 import LoginPanel from './../components/Home/LoginPanel';
 import Navigation from './../components/Home/Navigation';
 import GiveAwayHero from "./GiveAwayForm/GiveAwayHero";
@@ -9,27 +9,50 @@ import GiveAwayStepsSecond from './../components/GiveAwayForm/GiveAwaySecond';
 import GiveAwayThankYou from './../components/GiveAwayForm/GiveAwayThankYou';
 
 
-
 import importantMessages from './../data/importantMessages';
 import Contact from './Contact';
 import Footer from './Footer';
 
-function GiveAwayForm() {
-    return (
-        <>
-            <div name="giveAwayForm" className="container">
-                <LoginPanel/>
-                <Navigation/>
-                <GiveAwayHero/>
-            </div>
-            <ImportantMsg title={"Ważne!"} text={importantMessages.messages[0].first}/>
-            <GiveAwaySteps>
-                <GiveAwayStepsSecond/>
-            </GiveAwaySteps>
-            <Contact/>
-            <Footer/>
-        </>
-    )
+class GiveAwayForm extends Component {
+
+    state = {
+        pageDisplayed: 1
+    }
+
+    render() {
+
+        let importantMessage;
+        let displayedStep;
+        if (this.state.pageDisplayed === 1) {
+            importantMessage = importantMessages.messages[0].first;
+            displayedStep = <GiveAwayStepsFirst/>
+        } else if (this.state.pageDisplayed === 2) {
+            importantMessage = importantMessages.messages[0].second;
+            displayedStep = <GiveAwayStepsSecond/>
+        } else if (this.state.pageDisplayed === 3) {
+            importantMessage = importantMessages.messages[0].third;
+        } else if (this.state.pageDisplayed === 4) {
+            importantMessage = importantMessages.messages[0].fourth
+        } else if (this.state.pageDisplayed === 5) {
+            displayedStep = <GiveAwayThankYou/>
+        }
+
+        return (
+            <>
+                <div name="giveAwayForm" className="container">
+                    <LoginPanel/>
+                    <Navigation/>
+                    <GiveAwayHero/>
+                </div>
+                <ImportantMsg title={"Ważne!"} text={importantMessage}/>
+                <GiveAwaySteps>
+                    {displayedStep}
+                </GiveAwaySteps>
+                <Contact/>
+                <Footer/>
+            </>
+        )
+    }
 }
 
 export default GiveAwayForm;
