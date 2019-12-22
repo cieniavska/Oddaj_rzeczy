@@ -16,7 +16,13 @@ import Footer from './Footer';
 class GiveAwayForm extends Component {
 
     state = {
-        pageDisplayed: 1
+        pageDisplayed: 1,
+        message: ''
+    }
+
+    callbackFunction = (childData) => {
+      this.setState({pageDisplayed: this.state.pageDisplayed + 1, message: childData});
+      console.log(this.state.message)
     }
 
     render() {
@@ -25,7 +31,7 @@ class GiveAwayForm extends Component {
         let displayedStep;
         if (this.state.pageDisplayed === 1) {
             importantMessage = importantMessages.messages[0].first;
-            displayedStep = <GiveAwayStepsFirst/>
+            displayedStep = <GiveAwayStepsFirst parentCallback={this.callbackFunction}/>
         } else if (this.state.pageDisplayed === 2) {
             importantMessage = importantMessages.messages[0].second;
             displayedStep = <GiveAwayStepsSecond/>

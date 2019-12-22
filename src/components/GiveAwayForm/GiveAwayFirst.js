@@ -11,32 +11,48 @@ class GiveAwayStepsFirst extends Component {
             nonReusableClothes: false,
             toys: false,
             books: false,
-            other: false,
-            allItems: []
+            other: false
         };
     
         this.handleInputChange = this.handleInputChange.bind(this);
       }
     
 
-    handleInputChange(event) {
+    handleInputChange = (e) => {
 
-        const target = event.target;
+        const target = e.target;
         const value = target.type === "checkbox" ? target.checked : target.value;
         const name = target.name;
-    
+        
         this.setState({
-          [name]: value
+          [name]: value,
         });
+    }
 
-        this.state.allItems.push(name);
-      }
+    handleData = (e) => {
+        e.preventDefault();
+        let itemsToGive = [];
+        for (var key in this.state) {
+          if(this.state[key] === true) {
+            itemsToGive.push(key);
+          }
+        }
+        let data = {
+          items: itemsToGive.toString() 
+        };
+        console.log(data);
+        this.sendData(data);
+    }
+
+    sendData = (information) => {
+        this.props.parentCallback(information);
+   }
 
     render(){
     return (
     <div className="giveAwayStepsFirst flex">
         <span>Zaznacz, co chcesz oddać:</span>
-        <form>
+        <form onSubmit={this.handleData}>
             <label><input type="checkbox" checked={this.state.reusableClothes} id="reusableClothes" name="reusableClothes" onChange={this.handleInputChange}/>
             ubrania, które nadają się do ponownego użycia
             </label>
