@@ -17,12 +17,18 @@ class GiveAwayForm extends Component {
 
     state = {
         pageDisplayed: 1,
-        message: ''
+        message: '',
+        howManyBags: 0
     }
 
     callbackFunction = (childData) => {
       this.setState({pageDisplayed: this.state.pageDisplayed + 1, message: childData});
       console.log(this.state.message)
+    }
+
+    howManyBags = (childData) => {
+        this.setState({howManyBags: childData});
+        console.log(this.state.howManyBags)
     }
 
     render() {
@@ -34,7 +40,7 @@ class GiveAwayForm extends Component {
             displayedStep = <GiveAwayStepsFirst parentCallback={this.callbackFunction}/>
         } else if (this.state.pageDisplayed === 2) {
             importantMessage = importantMessages.messages[0].second;
-            displayedStep = <GiveAwayStepsSecond/>
+            displayedStep = <GiveAwayStepsSecond parentCallback={this.howManyBags}/>
         } else if (this.state.pageDisplayed === 3) {
             importantMessage = importantMessages.messages[0].third;
         } else if (this.state.pageDisplayed === 4) {
@@ -52,6 +58,7 @@ class GiveAwayForm extends Component {
                 </div>
                 <ImportantMsg title={"Ważne!"} text={importantMessage}/>
                 <GiveAwaySteps>
+                    <span>Krok {this.state.pageDisplayed}/4</span>
                     {displayedStep}
                 </GiveAwaySteps>
                 <Contact/>
