@@ -7,16 +7,29 @@ class GiveAwaySecond extends Component {
 
     state = {
         city: null,
+        optionalOrganization: ''
       }
 
-      handleChange = (city) => {
+    handleCityChange = (city) => {
         this.setState({ city });
-      }
+    }
+
+    handleOrganizationChange = (organization) => {
+        this.setState({
+            optionalOrganization: organization
+        });
+    }
 
     handleSubmit = e => {
         e.preventDefault();
-        this.sendData(this.state.city.value)
-        console.log(this.state.city.value)
+
+        let data = {
+            city: this.state.city,
+            optionalOrganization: this.state.optionalOrganization
+        };
+
+        this.sendData(data)
+        console.log(data, "value",this.state.optionalOrganization )
     };
 
     sendData = (information) => {
@@ -37,7 +50,8 @@ class GiveAwaySecond extends Component {
     <div className="giveAwayStepsThird flex">
         <span className="giveAwayStepsThird__title">Lokalizacja:</span>
         <form onSubmit={this.handleSubmit}>
-                <Select className="select" name="city" options={values} value={this.state.value} onChange={this.handleChange}/>
+                <Select className="select" name="city" options={values} value={this.state.city} onChange={this.handleCityChange}/>
+                <textarea value={this.state.optionalOrganization} onChange={this.handleOrganizationChange}></textarea>
             <div>
                 <button className="next__button">Wstecz</button>
                 <button className="next__button">Dalej</button>
