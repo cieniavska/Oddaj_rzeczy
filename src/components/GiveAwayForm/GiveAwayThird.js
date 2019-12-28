@@ -2,7 +2,7 @@ import React,{Component} from "react";
 import Select from 'react-select';
 
 
-class GiveAwaySecond extends Component {
+class GiveAwayThird extends Component {
 
 
     state = {
@@ -18,6 +18,7 @@ class GiveAwaySecond extends Component {
         this.setState({
             optionalOrganization: organization
         });
+        console.log(organization)
     }
 
     handleSubmit = e => {
@@ -29,7 +30,7 @@ class GiveAwaySecond extends Component {
         };
 
         this.sendData(data)
-        console.log(data, "value",this.state.optionalOrganization )
+        console.log("data:", data, "value",this.state.optionalOrganization )
     };
 
     sendData = (information) => {
@@ -51,6 +52,7 @@ class GiveAwaySecond extends Component {
         <span className="giveAwayStepsThird__title">Lokalizacja:</span>
         <form onSubmit={this.handleSubmit}>
                 <Select className="select" name="city" options={values} value={this.state.city} onChange={this.handleCityChange}/>
+                <label>Wpisz nazwę konkretnej organizacji (opcjonalne)</label>
                 <textarea value={this.state.optionalOrganization} onChange={this.handleOrganizationChange}></textarea>
             <div>
                 <button className="next__button">Wstecz</button>
@@ -62,4 +64,4 @@ class GiveAwaySecond extends Component {
 }
 }
 
-export default GiveAwaySecond;
+export default GiveAwayThird;
