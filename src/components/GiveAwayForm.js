@@ -17,7 +17,7 @@ import Footer from './Footer';
 class GiveAwayForm extends Component {
 
     state = {
-        pageDisplayed: 1,
+        pageDisplayed: 3,
         message: '',
         howManyBags: 0,
         whichCity: ''

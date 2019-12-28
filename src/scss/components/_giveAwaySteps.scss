@@ -85,3 +85,40 @@
     width: 600px;
     height: 300px;
 }
+
+.giveAwayStepsThird {
+    flex-direction: column;
+    &__title {
+        margin: 20px 0 10px 0;
+        font-size: 1rem;
+        font-weight: bolder;
+    }
+    &__help {
+        flex-direction: column;
+        &__title {
+            margin-top: 10px;
+            font-size: 1rem;
+            font-weight: bolder;
+        }
+        &__box {
+            width: 500px;
+        }
+        &__who {
+            display: inline-block;
+            border: 1px solid $text;
+            padding: 10px;
+            margin: 10px;
+            margin-left: 0;
+        }
+    }
+    &__organization {
+        margin-top: 10px;
+        flex-direction: column;
+        font-size: 1rem;
+        font-weight: bolder;
+    }
+    textarea {
+        margin-top: 10px;
+        background-color: transparent;
+    }
+}

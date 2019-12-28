@@ -52,8 +52,19 @@ class GiveAwayThird extends Component {
         <span className="giveAwayStepsThird__title">Lokalizacja:</span>
         <form onSubmit={this.handleSubmit}>
                 <Select className="select" name="city" options={values} value={this.state.city} onChange={this.handleCityChange}/>
-                <label>Wpisz nazwę konkretnej organizacji (opcjonalne)</label>
+                <div className="giveAwayStepsThird__help flex">
+                    <span className="giveAwayStepsThird__help__title">Komu chcesz pomóc?</span>
+                    <div className="giveAwayStepsThird__help__box">
+                        <div className="giveAwayStepsThird__help__who">dzieciom</div>
+                        <div className="giveAwayStepsThird__help__who">samotnym matkom</div>
+                        <div className="giveAwayStepsThird__help__who">bezdomnym</div>
+                        <div className="giveAwayStepsThird__help__who">niepełnosprawnym</div>
+                        <div className="giveAwayStepsThird__help__who">osobom starszym</div>
+                    </div>
+                </div>
+                <label className="giveAwayStepsThird__organization flex">Wpisz nazwę konkretnej organizacji (opcjonalne)
                 <textarea value={this.state.optionalOrganization} onChange={this.handleOrganizationChange}></textarea>
+                </label>
             <div>
                 <button className="next__button">Wstecz</button>
                 <button className="next__button">Dalej</button>
