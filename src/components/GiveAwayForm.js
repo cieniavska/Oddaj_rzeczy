@@ -25,17 +25,14 @@ class GiveAwayForm extends Component {
 
     callbackFunction = (childData) => {
       this.setState({pageDisplayed: this.state.pageDisplayed + 1, message: childData});
-      console.log('message',this.state.message)
     }
 
     howManyBags = (childData) => {
         this.setState({pageDisplayed: this.state.pageDisplayed + 1, howManyBags: childData});
-        console.log('bags',this.state.howManyBags)
     }
 
     whichCity = (childData) => {
         this.setState({whichCity: childData});
-        console.log('city',this.state.whichCity)
     }
 
     render() {

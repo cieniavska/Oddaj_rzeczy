@@ -4,10 +4,14 @@ import Select from 'react-select';
 
 class GiveAwayThird extends Component {
 
-
     state = {
         city: null,
-        optionalOrganization: ''
+        optionalOrganization: '',
+        kids: false,
+        mothers: false,
+        homeless: false,
+        disabled: false,
+        elderly: false
       }
 
     handleCityChange = (city) => {
@@ -16,21 +20,24 @@ class GiveAwayThird extends Component {
 
     handleOrganizationChange = (organization) => {
         this.setState({
-            optionalOrganization: organization
+            optionalOrganization: organization.target.value
         });
-        console.log(organization)
+    }
+
+    handleBtns = e => {
+        this.setState({
+            [e.target.name]: e.target.value === false ? true : false
+        });
+        console.log("kids", this.state.kids)
     }
 
     handleSubmit = e => {
         e.preventDefault();
-
         let data = {
             city: this.state.city,
             optionalOrganization: this.state.optionalOrganization
         };
-
         this.sendData(data)
-        console.log("data:", data, "value",this.state.optionalOrganization )
     };
 
     sendData = (information) => {
@@ -55,15 +62,15 @@ class GiveAwayThird extends Component {
                 <div className="giveAwayStepsThird__help flex">
                     <span className="giveAwayStepsThird__help__title">Komu chcesz pomóc?</span>
                     <div className="giveAwayStepsThird__help__box">
-                        <div className="giveAwayStepsThird__help__who">dzieciom</div>
-                        <div className="giveAwayStepsThird__help__who">samotnym matkom</div>
-                        <div className="giveAwayStepsThird__help__who">bezdomnym</div>
-                        <div className="giveAwayStepsThird__help__who">niepełnosprawnym</div>
-                        <div className="giveAwayStepsThird__help__who">osobom starszym</div>
+                        <button onClick={this.handleBtns} name="kids" className="giveAwayStepsThird__help__who">dzieciom</button>
+                        <button onClick={this.handleBtns} name="mothers" className="giveAwayStepsThird__help__who">samotnym matkom</button>
+                        <button onClick={this.handleBtns} name="homeless" className="giveAwayStepsThird__help__who">bezdomnym</button>
+                        <button onClick={this.handleBtns} name="disabled" className="giveAwayStepsThird__help__who">niepełnosprawnym</button>
+                        <button onClick={this.handleBtns} name="elderly" className="giveAwayStepsThird__help__who">osobom starszym</button>
                     </div>
                 </div>
                 <label className="giveAwayStepsThird__organization flex">Wpisz nazwę konkretnej organizacji (opcjonalne)
-                <textarea value={this.state.optionalOrganization} onChange={this.handleOrganizationChange}></textarea>
+                <textarea name="optionalOrganization" value={this.state.optionalOrganization} onChange={this.handleOrganizationChange}></textarea>
                 </label>
             <div>
                 <button className="next__button">Wstecz</button>
