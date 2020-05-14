@@ -1,0 +1,17 @@
+.importantMsg-wrapper {
+    width: 100vw;
+    background-color: $border;
+    padding: 35px;
+}
+
+.importantMsg {
+    padding: 50px;
+    &__title {
+        font-weight: bolder;
+        font-size: 2rem;
+        padding-bottom: 5px;
+    }
+    &__text {
+        font-size: 1rem;
+    }
+}

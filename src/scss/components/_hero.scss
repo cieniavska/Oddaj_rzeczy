@@ -12,6 +12,17 @@
         background-size: cover;
         background-position-x: 98%;
     }
+    &__image2 {
+        top: 0;
+        left: 0;
+        position: absolute;
+        height: 80vh;
+        width: 50vw;
+        background-image: url(./../../assets/Hero2.png);
+        background-size: cover;
+        background-position-x: 98%;
+        @include clearfix;
+    }
     &__emptySpace {
         width: 60%;
         height: 80vh;
@@ -29,6 +40,42 @@
         }
         &__decoration {
             @include decoration;
+        }
+        &__steps {
+            font-size: 2rem;
+            font-weight: lighter;
+            margin-bottom: 10px;
+        }
+        .steps__boxes {
+            flex-direction: row;
+            font-weight: lighter;
+            background-color: $bg2;
+            .steps__box {
+                @include centralize;
+                position: relative;
+                text-align: center;
+                margin: 10px;
+                width: 110px;
+                height: 110px;
+                &:before {
+                    content: '';
+                    display: block;
+                    width: 110px;
+                    height: 110px;
+                    border: 1px solid $text;
+                    position: absolute;
+                    top: 3%;
+                    left: 0;
+                    transform: rotate(45deg);
+                }
+                &:hover {
+                    transition: .2s;
+                    color: $hover;
+                }
+            }
+            .steps__number, .steps__description {
+                font-size: 1.1rem;
+            }
         }
         &__btns {
             font-size: 2.2rem;
